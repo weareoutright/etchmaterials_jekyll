@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 208.7 78.5" style="enable-background:new 0 0 208.7 78.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#707070;}
+	.st1{font-family:'Avenir-Black';}
+	.st2{font-size:5.85px;}
+	.st3{font-size:3.393px;}
+	.st4{font-size:8.91px;}
+	.st5{fill:none;stroke:#707070;stroke-width:0.93;stroke-miterlimit:8;}
+	.st6{fill:none;stroke:#707070;stroke-width:0.93;stroke-miterlimit:8;stroke-dasharray:0,0,0.98,0.98;}
+	.st7{fill:none;stroke:#707070;stroke-width:0.93;stroke-miterlimit:8;stroke-dasharray:0,0,1.01,1.01;}
+</style>
+<text transform="matrix(1 0 0 1 157.4166 17.8904)" class="st0 st1 st2">Hydrogen </text>
+<text transform="matrix(1 0 0 1 157.4166 24.9104)" class="st0 st1 st2">(H</text>
+<text transform="matrix(1 0 0 1 163.4863 26.8604)" class="st0 st1 st3">2</text>
+<text transform="matrix(1 0 0 1 165.5066 24.9104)" class="st0 st1 st2">) Gas</text>
+<text transform="matrix(1 0 0 1 157.2665 41.5004)" class="st0 st1 st2">Solid Carbon </text>
+<text transform="matrix(1 0 0 1 157.2665 48.5204)" class="st0 st1 st2">(C) Powder</text>
+<text transform="matrix(1 0 0 1 157.2065 64.3204)" class="st0 st1 st2">No CO</text>
+<text transform="matrix(1 0 0 1 176.0361 198.7786)" class="st1 st3">2</text>
+<text transform="matrix(1 0 0 1 157.2065 71.3304)" class="st0 st1 st2">Emissions</text>
+<text transform="matrix(1 0 0 1 66.2 6.5304)" class="st0 st1 st2">Catalyst Regeneration</text>
+<text transform="matrix(1 0 0 1 75.87 42.5804)" class="st0 st1 st4">The ETCH </text>
+<text transform="matrix(1 0 0 1 75.37 53.2704)" class="st0 st1 st4">Proccess</text>
+<text transform="matrix(1 0 0 1 111.31 53.2704)" class="st0 st1 st4">™</text>
+<polyline class="st5" points="141.9,43.2 141.9,18.6 151.7,18.6 "/>
+<g>
+	<line class="st5" x1="151.7" y1="66.9" x2="151.2" y2="66.9"/>
+	<line class="st6" x1="150.2" y1="66.9" x2="142.9" y2="66.9"/>
+	<polyline class="st5" points="142.4,66.9 141.9,66.9 141.9,66.4 	"/>
+	<line class="st7" x1="141.9" y1="65.4" x2="141.9" y2="43.7"/>
+	<line class="st5" x1="141.9" y1="43.2" x2="141.9" y2="42.7"/>
+</g>
+<line class="st5" x1="131.6" y1="42.8" x2="141.5" y2="42.8"/>
+<line class="st5" x1="141.9" y1="42.8" x2="151.7" y2="42.8"/>
+<line class="st5" x1="141.9" y1="18.6" x2="151.7" y2="18.6"/>
+<polyline class="st5" points="149.7,16.3 151.9,18.6 149.7,20.8 "/>
+<g>
+	<line class="st5" x1="98.3" y1="14.4" x2="73.6" y2="14.4"/>
+	<line class="st5" x1="97.8" y1="23.7" x2="97.8" y2="14"/>
+	<polyline class="st5" points="75.2,16.7 73,14.4 75.2,12.2 	"/>
+</g>
+<polyline class="st5" points="149.7,40.5 151.9,42.8 149.7,45 "/>
+<polyline class="st5" points="149.7,64.7 151.9,67 149.7,69.2 "/>
+<text transform="matrix(1 0 0 1 16.88 20.8904)" class="st0 st1 st2">Catalyst</text>
+<text transform="matrix(1 0 0 1 14.84 68.5604)" class="st0 st1 st2">Methane </text>
+<text transform="matrix(1 0 0 1 14.84 75.5804)" class="st0 st1 st2">(CH</text>
+<text transform="matrix(1 0 0 1 24.9102 77.5303)" class="st0 st1 st3">4</text>
+<text transform="matrix(1 0 0 1 26.93 75.5804)" class="st0 st1 st2">)</text>
+<g>
+	<polyline class="st5" points="61.2,40.5 63.5,42.7 61.2,45 	"/>
+	<polyline class="st5" points="42.7,67 52.5,67 52.5,18.6 42.7,18.6 	"/>
+	<line class="st5" x1="62.8" y1="42.8" x2="52.8" y2="42.8"/>
+</g>
+</svg>

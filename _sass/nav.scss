@@ -1,0 +1,143 @@
+﻿.header {
+    width: 100%;
+    background-color: #262626;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    .nav-bar {
+        width: calc(100% - 40px);
+        max-width: 1500px;
+        margin: 0px auto;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 20px;
+
+        @media screen and (min-width: 700px) {
+            align-items: center;
+        }
+
+        @media screen and (min-width: 1580px) {
+            width: 100%;
+            padding: 0;
+        }
+
+        .tag {
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+        .left {
+            flex: 1;
+
+            @media screen and (min-width: 993px) {
+                flex: 0 0 300px;
+            }
+
+            .logo {
+                width: 100%;
+                max-width: 140px;
+                height: auto;
+                margin: 0;
+
+                @media screen and (min-width: 400px) {
+                    max-width: 200px;
+                }
+            }
+
+            .tag-mobile {
+                display: block;
+                text-align: left;
+                margin: 0;
+
+                @media screen and (min-width: 400px) {
+                    margin: 0;
+                }
+
+                @media screen and (min-width: 993px) {
+                    display: none;
+                }
+            }
+        }
+
+        .middle {
+            display: flex;
+
+            @media screen and (min-width: 993px) {
+                flex-grow: 1;
+            }
+
+            .tag-desktop {
+                display: none;
+                padding: 0;
+                text-align: center;
+
+                @media screen and (min-width: 993px) {
+                    display: block;
+                    margin: 0 60px 0 0;
+                }
+
+
+                @media screen and (min-width: 900px) {
+                    margin: 0 196px 0 0;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            flex: 0;
+            margin: 8px 0 0 0;
+
+             @media screen and (min-width: 700px) {
+                margin: 0;
+            }
+
+            a {
+                text-align: right;
+                display: block;
+
+                .fa {
+                    font-size: 2em;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+#menu {
+    display: none;
+    width: 100%;
+    background-color: #EDEDED;
+    padding: 20px 0;
+    margin-top: 107px;
+    margin-bottom: -107px;
+
+    ul {
+        width: 100%;
+        max-width: 1500px;
+        margin: 0px auto;
+        list-style-type: none;
+
+        li {
+            margin: 5px;
+            font-family: "made_outer_sans_medium",Arial,sans-serif;
+            color: #262626;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 1em;
+
+            a {
+                font-family: "made_outer_sans_medium",Arial,sans-serif;
+                color: #262626;
+                text-transform: uppercase;
+                font-size: 20px;
+                line-height: 1em;
+            }
+        }
+    }
+}

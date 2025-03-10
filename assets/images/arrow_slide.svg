@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.888" height="68.718" viewBox="0 0 59.888 68.718">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="68.718" height="59.888" fill="#ededed"/>
+    </clipPath>
+  </defs>
+  <g id="arrow_slide" transform="translate(0 68.718) rotate(-90)">
+    <g id="Group_3" data-name="Group 3" clip-path="url(#clip-path)">
+      <path id="Path_95" data-name="Path 95" d="M34.295,59.888a4.216,4.216,0,0,0,2.432-.768L68.718,34.039l-4.735-6.014L38.134,48.115V0H30.456V48.115L4.735,27.9,0,33.912,31.992,58.993a3.083,3.083,0,0,0,2.3.9Z" fill="#ededed"/>
+    </g>
+  </g>
+</svg>

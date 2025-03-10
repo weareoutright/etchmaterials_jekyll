@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "ETCH, Inc. Secures Seed-stage Investment From Emerald Development Managers To Support The Commercialization Of Its Proprietary Decarbonization Process"
+date: 2023-07-22 01:00:00 -0500
+categories: Press Release
+---
+
+<div class="content">
+	<div class="post-top-pressrelease">		
+		<h1>{{page.title}}</h1>	
+		<h4>ETCH will be field testing commercial units later this year</h4>
+	</div>
+</div>
+
+
+<div class="post-bottom-pressrelease content">
+
+<p>Baltimore, MD – July 25, 2023 –ETCH, Inc. (ETCH), a decarbonization company that eliminates carbon from natural gas to produce both clean hydrogen and solid carbon, today announced it has secured $7.5m in seed-stage funding from Emerald Development Managers LP. ETCH will use these funds to take the technology to market and begin commercialization. ETCH anticipates that it will be field testing commercial units later this year.</p>
+<p>Formulated in the labs of Johns Hopkins University by Prof. Jonah Erlebacher, Ph.D., The ETCH Process&trade; uses a novel closed-loop chemical reaction cycle that leads to highly efficient thermal and materials management in reactor systems. ETCH’s revolutionary decarbonization technology delivers unrivaled environmental impact, economic value, and versatility that will accelerate the clean energy transition. In 2018, the project team secured a competitive multi-year grant from the Department of Energy (DOE) Advanced Research Projects Agency – Energy (ARPA-E), which provided critical research funding.</p>
+<p>The ETCH Process&trade; is a clear differentiator among other hydrogen technologies for its:</p>
+<ul>
+<li><strong>Efficiency</strong>: The ETCH Process&trade; can convert nearly 100% of natural gas input into hydrogen, regardless of scale, and it requires minimal maintenance through its modular design.</li>
+<li><strong>Affordability</strong>: ETCH’s low-cost solution is on track to beat the DOE Hydrogen Shot cost target of less than $1/kg.</li>
+<li><strong>Sustainability</strong>: ETCH requires less energy and no water thereby providing the most versatility to operate across geographies. </li>
+<li><strong>Security</strong>: ETCH uses earth-abundant materials that can be sourced domestically and will not be subject to supply chain disruptions and thereby enhance energy security. </li>
+</ul>
+<blockquote>“We cannot solve our climate and emissions challenge without cleaning up natural gas,” said Dr. Jonah Erlebacher, ETCH Co-founder and Chief Technology Officer. “The ETCH Process&trade; is a holistic solution that will allow decarbonized natural gas to be a part of our global energy system. This significant seed-stage funding demonstrates confidence in our technology and business plan as we work toward a clean energy future.”</blockquote>
+<blockquote>“ETCH has developed an amazing new technology. It is practical, has dramatically lower operating and capital costs compared to any existing or proposed decarbonization approach, and is easily deployable at any scale” said Neil Cohen, Founder and Chairman of Emerald Development Managers. “The ETCH Process&trade; can be easily implemented in-line at millions of facilities, delivering clean hydrogen and significant solid carbon that can be used in a multitude of ways.”</blockquote>
+<blockquote>“The ETCH Process&trade; is an intelligent steward of our natural resources – at scale – for an energy secure and sustainable future,” said Ed Schlesinger, Dean of Johns Hopkins University’s Whiting School of Engineering. “We are proud to support ETCH as it moves forward on its journey.” </blockquote>
+
+<p style="font-weight:700">About ETCH</p>
+<p>Formulated in the labs of Johns Hopkins University and a recipient of a competitive DOE ARPA-E grant, ETCH, Inc. is a revolutionary decarbonization company that eliminates carbon from natural gas to produce both clean hydrogen and solid carbon. No greenhouse gases are ever produced. The ETCH Process&trade; will accelerate the clean energy transition through a solution that delivers unrivaled environmental impact, economic value, and versatility. For more information on ETCH, please visit www.etchmaterials.com </p>
+
+</div>
+

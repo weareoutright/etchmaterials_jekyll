@@ -1,0 +1,82 @@
+﻿
+<div class="header">
+    <div class="nav-bar">
+
+        <div class="left">
+            <a href="/">
+                <img class="logo" src="/assets/images/ETCH_Logo.svg" />
+            </a>
+            <p class="tag-mobile tag">The <strong>future</strong> of decarbonization</p>
+        </div>
+
+        <div class="middle">
+            <p class="tag-desktop tag">The <strong>future</strong> of decarbonization</p>
+        </div>
+
+        <div class="right">
+            
+            <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div id="menu">
+    <ul>
+        <li><a href="/who-we-are">WHO WE ARE</a></li>
+        <li><a href="/#etch-process">The ETCH Process</a>&trade;</li>
+        <li><a href="/news">NEWS</a></li> 
+        <li><a href="https://boards.greenhouse.io/etchinc" target="_blank">CAREERS</a></li>
+        <li><a href="/#contact-us">CONTACT US</a></li>
+    </ul>
+</div>
+
+<script>
+
+    var waitForFinalEvent=(function() {
+        var timers={};
+        return function(callback,ms,uniqueId) {
+            if(!uniqueId) {
+                uniqueId="Don't call this twice without a uniqueId";
+            }
+            if(timers[uniqueId]) {
+                clearTimeout(timers[uniqueId]);
+            }
+            timers[uniqueId]=setTimeout(callback,ms);
+        };
+    })();
+
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function showMenu() {
+        var x=document.getElementById("menu");
+        if(x.style.display==="block") {
+            x.style.display="none";
+        } else {
+            x.style.display="block";
+            $("html, body").animate({scrollTop: 0},"fast");
+        }
+    }
+
+    $(window).resize(function() {
+        waitForFinalEvent(function() {
+            updateNavAndContainerMargins();
+        },200,"pageresize");
+    });
+
+    function updateNavAndContainerMargins(){
+        let headerHeight=$(".header").outerHeight();
+        console.log("headerHeight",headerHeight);
+        $("#menu").css("margin-top",headerHeight+"px");
+        $("#menu").css("margin-bottom",(headerHeight*-1)+"px");
+        $(".container").css("margin-top",headerHeight+"px");
+        $("html").css("scroll-padding-top",headerHeight+"px");
+    }
+
+    $(function() {
+        updateNavAndContainerMargins();
+    });
+
+    
+
+</script>

@@ -1,0 +1,24 @@
+﻿.privacy-policy {
+    background-image: url(/assets/images/molecule_bg.png);
+    width: 100%;
+    background-color: #262626;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+
+    .content {
+
+        h2 {
+            line-height: 1.3em;
+            max-width: 800px;
+            padding: 0;
+            margin: 0 0 80px 0;
+            font-size: 72px;
+        }
+
+        p, li, h1,h2,h3,h4,h5,h6, a {
+            color: #FFFFFF;
+        }
+    }
+}

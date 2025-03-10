@@ -1,0 +1,74 @@
+﻿// Body resets
+//
+// Update the foundational and global aspects of the page.
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth !important;
+}
+
+p, a, li, blockquote {
+    font-family: 'Avenir45Book', sans-serif;
+    font-size: 16px;
+    line-height: 1.45em;
+}
+
+body {
+    color: #262626;
+    background-color: #EDEDED;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+// No `:visited` state is required by default (browsers will use `a`)
+a {
+    color: #262626;
+    text-decoration: none;
+    // `:focus` is linked to `:hover` for basic accessibility
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    strong {
+        color: inherit;
+    }
+}
+
+.container {
+    width: 100%;
+    background-color: #EDEDED;
+    margin-top: 107px;
+
+    .content {
+        width: 100% ;
+        max-width: 1500px;
+        margin: 0px auto;
+        padding: 0 40px;
+
+        @media screen and (min-width: 1580px) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "made_outer_sans_medium", Arial, sans-serif;
+    font-weight: 400;
+}
+
+.jumptarget::before {
+    content: "";
+    display: block;
+    height: 120px; /* fixed header height*/
+    margin: -120px 0 0; /* negative fixed header height */
+}

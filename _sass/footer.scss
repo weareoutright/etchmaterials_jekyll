@@ -1,0 +1,163 @@
+﻿.container-footer {
+    width: 100%;
+    background-color: #EDEDED;
+    padding: 40px 0;
+
+    .copyright {
+        width: 100%;
+        max-width: 1500px;
+        margin: 0px auto;
+        padding: 40px;
+
+        p {
+            font-size: 14px;
+        }
+
+        @media screen and (min-width: 1580px) {
+            padding: 40px 0;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        max-width: 1500px;
+        margin: 0px auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0 40px;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 1580px) {
+            padding: 0;
+        }
+
+        .left {
+            flex: 1;
+
+            @media screen and (min-width: 900px) {
+                flex: 1;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+
+            }
+
+            .copyright, a {
+                font-size: 14px;
+            }
+        }
+
+        .middle {
+            flex: 0 0 100%;
+            margin: 0 0 0 0;
+            display: none;
+
+            @media screen and (min-width: 900px) {
+                margin: 0 50px 0 0;
+                flex: 1;
+            }
+
+            @media screen and (min-width: 600px) {
+                flex: 1;
+            }
+
+            ul {
+                list-style: none;
+                float: none;
+                margin: 50px 0 0 0;
+                padding: 0;
+
+                @media screen and (min-width: 600px) {
+                    margin: 0;
+                    float: right;
+                }
+
+                li {
+                    margin: 0 0 20px 0;
+                    line-height: 1em;
+                    padding: 0;
+
+                    a {
+                        font-family: "made_outer_sans_medium",Arial,sans-serif;
+                        color: #262626;
+                        text-transform: uppercase;
+                        font-size: 20px;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 0 0 100%;
+            margin: 30px 0 0 0;
+
+            @media screen and (min-width: 1000px) {
+                margin: 0 0 0 50px;
+                flex: 0 0 500px;
+            }
+
+            .fa {
+                font-size: 2em;
+                color: #FFF;
+            }
+
+            .section-title {
+                font-family: "made_outer_sans_medium", Arial, sans-serif;
+                font-size: 20px;
+                color: #262626;
+                text-transform: uppercase;
+                line-height: 1em;
+                margin: 0 0 20px 0;
+            }
+
+            form {
+                margin: 0px auto;
+                display: flex;
+                max-width: 100%;
+                flex-wrap: wrap;
+
+                @media screen and (min-width: 700px) {
+                }
+
+
+                input {
+                    background-color: transparent;
+                    flex: 0 0 100%;
+                    border: none;
+                    border-bottom: 1px solid #707070;
+                    padding: 10px 20px 10px 0;
+                    font-size: 18px;
+                    color: #262626;
+                    margin: 0 0 10px 0;
+                }
+
+
+                input.short:first-child {
+                    margin-right: 20px;
+                }
+
+                .submit {
+                    background-color: transparent;
+                    padding: 0;
+                    color: #262626;
+                    border: none;
+                    font-family: 'Avenir95Black', sans-serif;
+                    font-size: 20px;
+                    line-height: 1.45em;
+                    cursor: pointer;
+                    margin: 30px 0 0 0;
+                }
+
+                .submit:after {
+                    content: url(/assets/images/submit-arrow.svg);
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+    }
+}

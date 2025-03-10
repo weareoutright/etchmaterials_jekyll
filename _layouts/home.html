@@ -1,0 +1,220 @@
+﻿---
+layout: default
+title: Home
+id: Home
+---
+
+<div class="home-header" style="background-image: url(assets/images/molecule_bg.png);">
+
+    <div class="content">
+        <h2 class="breakthrough">Breakthrough<br /><span class="pill blue-pill">&nbsp;</span> Solutions for a Clean Sustainable Future <span class="pill orange-pill">&nbsp;</span></h2>
+        <div class="middle">&nbsp;</div>
+        <div class="accelerating">
+            <p>
+                Accelerating the clean energy transition
+            </p>
+            <p>Decarbonizing the heaviest of industries with the lightest footprint: no water, no waste, nothing toxic. Our patented technology eliminates carbon dioxide emissions, generates hydrogen, and creates usable, clean solid carbon with an affordable, scalable, and portable process.</p>
+            <img src="assets/images/arrow_down.svg" />
+        </div>
+    </div>
+</div>
+
+<div class="leader" style="background-image: url(assets/images/clean_future.png);">
+
+    <div class="content">
+        <h4>
+            ETCH IS THE LEADER IN CLEAN HYDROGEN FROM METHANE DECOMPOSITION
+        </h4>
+    </div>
+
+</div>
+
+<div class="checkmarks">
+    <div class="content">
+        <ul class="">
+            <li>SCALABLE</li>
+            <li>LOWER COST</li>
+            <li>EASILY INTEGRATED</li>
+            <li>NO WATER USE</li>
+        </ul>
+    </div>
+</div>
+
+<div id="etch-process" class="process-container">
+    <div class="content">
+        <h3>THE ETCH PROCESS&trade;</h3>
+
+        <p class="intro">ETCH’s revolutionary decarbonization technology delivers unrivaled economic value and versatility that will accelerate the clean energy transition. It scales from small, distributed uses to utility-scale with wide geographic applicability and without dependence on access to water, wind or solar.</p>
+        <ul class="etch-process-buttons">
+            <li data-slide="0" class="active">Process Overview</li>
+            <li data-slide="1">Hydrogen Production</li>
+            <li data-slide="2">Decarbonization</li>
+            <li data-slide="3">Carbon Materials</li>
+
+        </ul>
+
+        <div id="process">
+
+            <div class="slide01">
+                <div class="col">
+                    <p class="slide-title">
+                        Process Overview
+                    </p>
+                    <ul class="highlights">
+                        <li>The ETCH Process&trade; is a novel, patented process to convert natural gas (methane) into hydrogen and solid carbon. No CO<sub>2</sub> is ever created</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="illustration" src="/assets/images/ETCH_Process_Overview.svg" />
+                </div>
+            </div>
+
+            <div class="slide02">
+                <div class="col">
+                    <p class="slide-title">
+                        Hydrogen Production
+                    </p>
+                    <ul class="highlights">
+                        <li>Pure H<sub>2</sub> production with zero CO<sub>2</sub> emissions by decarbonizing hydrocarbon fuels</li>
+                        <li>Small footprint, high efficiency, and easily scaled</li>
+                        <li>No water</li>
+                        <li>The ETCH Process&trade; is based on new, proprietary thermochemistry with earth-abundant, domestically sourced minerals</li>
+                        <li>The future will see dramatically increased usage of hydrogen – to be made via the ETCH Process&trade;</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="illustration" src="/assets/images/ETCH_Hydrogen_Production.svg" />
+                </div>
+            </div>
+
+            <div class="slide03">
+                <div class="col">
+                    <p class="slide-title">
+                        Decarbonization
+                    </p>
+                    <ul class="highlights">
+                        <li>The ETCH Process&trade; can be integrated into existing natural gas power plants, industrial facilities and other uses</li>
+                        <li>Gas is stripped of carbon, leaving pure hydrogen fuel</li>
+                        <li>CO<sub>2</sub> emissions are reduced, potentially to zero</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="illustration" src="/assets/images/ETCH_Decarbonization.svg" />
+                </div>
+            </div>
+
+            <div class="slide04">
+                <div class="col">
+                    <p class="slide-title">
+                        Carbon Materials
+                    </p>
+                    <ul class="highlights">
+                        <li>Every ton of hydrogen produces at least three tons of pure solid carbon</li>
+                        <li>ETCH Process&trade; carbon is pure and has passed a TCLP test – the standard for environmentally responsible large-scale storage or disposal</li>
+                        <li>As-made carbon may find use in current carbon markets (carbon black, activated carbon, synthetic graphite)</li>
+                        <li>ETCH is actively pursuing methods to transform and integrate carbon into high value products such as fiber</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="illustration" src="/assets/images/ETCH_Carbon_Materials.svg" />
+                </div>
+            </div>
+
+        </div>
+
+        <p class="copyright">&copy; {{ site.time | date: '%Y' }} ETCH, Inc.</p>
+
+        <script>
+
+            $(document).ready(() => {
+                $('#process').slick({
+                    arrows: 0
+                });
+
+                $('ul.etch-process-buttons li').click(function(e) {
+                    $('#process').slick('slickGoTo',$(this).attr("data-slide"));
+                });
+
+                /*
+                $('.arrow-left.active').click(function(e) {
+                    let currentSlide=$('#process').slick('slickCurrentSlide');
+                    $('#process').slick('slickGoTo',(currentSlide-1));
+                });
+
+                $('.arrow-right.active').click(function(e) {
+                    let currentSlide=$('#process').slick('slickCurrentSlide');
+                    $('#process').slick('slickGoTo',(currentSlide+1));
+                });
+                */
+
+                $('#process').on('afterChange',function(event,slick,currentSlide,nextSlide) {
+                    $('ul.etch-process-buttons li').each(function() {
+                        if($(this).attr("data-slide")==currentSlide) {
+                            $(this).addClass("active");
+                        } else {
+                            $(this).removeClass("active");
+                        }
+
+                    });
+                });
+
+            });
+
+        </script>
+    </div>
+</div>
+
+<div class="team">
+    <div class="content">
+        <h3>TEAM</h3>
+
+        <ul class="leadership">
+            <li class="co-founder"><img src="/assets/images/Jonah.png" /><p class="name">&mdash; Jonah Erlebacher</p><p class="job-title">Co-Founder and<br />Chief Technology Officer</p><a href="/who-we-are#jonah">Read Bio</a></li>
+            <li class="co-founder"><img src="/assets/images/John.png" /><p class="name">&mdash; John Fini</p><p class="job-title">Co-Founder and<br />Senior Advisor</p><a href="/who-we-are#john">Read Bio</a></li>
+        </ul>
+
+        <ul class="">
+            <li><img src="/assets/images/Shashank.png" /><p class="name">&mdash; Shashank Vummidi Lakshman</p><p class="job-title">Director for Science and Technology Commercialization</p></li>
+            <li><img src="/assets/images/Ellen.png" /><p class="name">&mdash; Ellen Benn</p><p class="job-title">Head of Operations</p></li>
+            <li><img src="/assets/images/Anna.png" /><p class="name">&mdash; Anna Goodridge</p><p class="job-title">Director of Engineering</p></li>
+        </ul>
+    </div>
+</div>
+
+<div class="partners">
+    <div class="content">
+        <h3>PARTNERS</h3>
+        <ul class="">
+            <li><img src="/assets/images/acme-logo-black-and-white.png" /></li>
+            <li><img src="/assets/images/acme-logo-black-and-white.png" /></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div id="contact-us" class="updates">
+    <div class="content">
+        <h3>Get updates</h3>
+        <form accept-charset="UTF-8" action="https://formkeep.com/f/fee60f61a0ee" method="POST">
+            <input class="short" type="text" name="name" placeholder="Name">
+            <input class="short" type="text" name="company" placeholder="Company">
+            <input type="email" name="email" placeholder="Email Address">
+            <input type="hidden" name="utf8" value="✓">
+            <button class="submit" type="submit">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+<div class="email">
+    <div class="content">
+
+        <a href="mailto:info@etchmaterials.com">info@etchmaterials.com</a>
+
+    </div>
+</div>
+
+
+
