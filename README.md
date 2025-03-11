@@ -18,8 +18,8 @@ Live: [https://etchmaterials.com](https://etchmaterials.com)
 
 1. Clone the repository:
     ```sh
-    git clone git@github.com:weareoutright/etchmaterials.git
-    cd etchmaterials
+    git clone git@github.com:weareoutright/etchmaterials_jekyll.git
+    cd etchmaterials_jekyll
     ```
 
 2. Start the Jekyll local site:
