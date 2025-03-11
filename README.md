@@ -3,7 +3,7 @@
 This project is a static HTML website, build with Jekyll, and hosted on Siteworx. The local development environment is managed using Jekyll, and deployment to the live server is done via FTP.
 
 ## Environments
-Local: [http://127.0.0.1:4000/e](http://127.0.0.1:4000/)
+Local: [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 
 Live: [https://etchmaterials.com](https://etchmaterials.com)
 
@@ -29,7 +29,7 @@ Live: [https://etchmaterials.com](https://etchmaterials.com)
     ```
 
 3. Access the local site:
-   Open your browser and navigate to [http://127.0.0.1:4000/e](http://127.0.0.1:4000/)
+   Open your browser and navigate to [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 
 4. Build for production:
     ```sh
