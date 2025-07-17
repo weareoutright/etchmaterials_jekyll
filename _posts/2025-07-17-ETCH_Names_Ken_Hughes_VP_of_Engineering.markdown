@@ -7,8 +7,7 @@ categories: Press Release
 
 <div class="content">
 	<div class="post-top-pressrelease">		
-		<h1>{{page.title}}</h1>	
-		<h4>Industry veteran will lead engineering efforts as company prepares for commercial deployment</h4>
+		<h1>{{page.title}}</h1>
 	</div>
 </div>
 
