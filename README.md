@@ -52,10 +52,80 @@ This project is a static HTML website built with Jekyll and hosted on Siteworx. 
 
 ## Deployment
 
-### Steps
+This site automatically deploys to [https://etchmaterials.com](https://etchmaterials.com) using GitHub Actions when changes are pushed to the `main` branch.
 
-1. Merge to `main` branch on GitHub
-2. View live site at [https://etchmaterials.com](https://etchmaterials.com).
+### Deployment Workflow
+
+The deployment process uses GitHub Actions to:
+
+1. **Build the Jekyll site** using Ruby 3.1 and bundler
+2. **Deploy via FTP** to the Siteworx server
+3. **Upload only changed files** for efficient deployments
+
+### Contributing Workflow
+
+#### For Content Updates (News, Team Changes, etc.)
+
+1. **Create a feature branch** from `main`:
+   ```sh
+   git checkout main
+   git pull origin main
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make your changes** (add news articles, update team info, etc.)
+
+3. **Test locally**:
+   ```sh
+   bundle exec jekyll serve
+   ```
+   Review your changes at [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+
+4. **Commit and push**:
+   ```sh
+   git add .
+   git commit -m "Description of your changes"
+   git push origin feature/your-feature-name
+   ```
+
+5. **Create a Pull Request** on GitHub:
+   - Go to the repository on GitHub
+   - Click "New pull request"
+   - Select your feature branch
+   - Add a description of your changes
+   - Request review from team members
+
+6. **Deploy**: Once the PR is approved and merged into `main`, the site will automatically deploy
+
+#### For Larger Changes (Design, Structure, etc.)
+
+Follow the same workflow as above, but consider:
+
+- Creating a more detailed PR description
+- Testing more thoroughly across different pages
+- Coordinating with team members before deployment
+
+### Deployment Configuration
+
+The deployment is configured in `.github/workflows/deploy.yml` and requires these GitHub repository secrets:
+
+- `SFTP_SERVER` - The Siteworx server hostname
+- `SFTP_USERNAME` - FTP username
+- `SFTP_PASSWORD` - FTP password
+
+### Monitoring Deployments
+
+- View deployment status in the "Actions" tab on GitHub
+- Failed deployments will show error details in the action logs
+- The deployment typically takes 2-3 minutes to complete
+
+### Emergency Rollback
+
+If a deployment causes issues:
+
+1. **Quick fix**: Make a hotfix on a new branch, create PR, and merge
+2. **Revert**: Use GitHub's "Revert" button on the problematic commit
+3. **Manual deployment**: Contact the repository administrator for manual FTP access if needed
 
 ## Content Management
 
