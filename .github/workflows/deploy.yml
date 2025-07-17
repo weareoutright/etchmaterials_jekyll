@@ -36,3 +36,5 @@ jobs:
         timeout: 60000
         log-level: verbose
         security: loose
+        dry-run: false
+        dangerous-clean-slate: false
