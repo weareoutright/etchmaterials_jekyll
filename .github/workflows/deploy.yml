@@ -23,13 +23,16 @@ jobs:
       run: |
         bundle exec jekyll build --verbose
     
-    - name: Deploy to Siteworx via SFTP
+    - name: Deploy to Siteworx via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.SFTP_SERVER }}
         username: ${{ secrets.SFTP_USERNAME }}
         password: ${{ secrets.SFTP_PASSWORD }}
         local-dir: ./_site/
-        server-dir: /test-deploy/
+        server-dir: test-deploy/
         protocol: ftp
         port: 21
+        timeout: 60000
+        log-level: verbose
+        security: loose
