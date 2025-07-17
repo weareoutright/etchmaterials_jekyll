@@ -52,21 +52,10 @@ This project is a static HTML website built with Jekyll and hosted on Siteworx. 
 
 ## Deployment
 
-### Prerequisites
-
-* FTP client (e.g., FileZilla, Cyberduck)
-* Credentials for the Siteworx server can be found in "Keeper > Clients > ETCH > ETCH FTP (Siteworx)"
-
 ### Steps
 
-1. Build the project (if necessary):
-    ```sh
-    bundle exec jekyll build
-    ```
-2. Connect to the Siteworx server using your FTP client with the provided credentials.
-3. Upload the contents of the `_site` directory to the appropriate directory on the server: "/etchmaterials.com/html"
-5. Be CAREFUL, this is a static HTML site and there is an index.html in several different directories. Make sure you don't accidentally transfer the files into the wrong places!
-4. View live site at [https://etchmaterials.com](https://etchmaterials.com).
+1. Merge to `main` branch on GitHub
+2. View live site at [https://etchmaterials.com](https://etchmaterials.com).
 
 ## Content Management
 
