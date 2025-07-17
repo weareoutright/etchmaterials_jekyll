@@ -1,0 +1,35 @@
+name: Deploy to Siteworx
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+    
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build --verbose
+    
+    - name: Deploy to Siteworx via SFTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.SFTP_SERVER }}
+        username: ${{ secrets.SFTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        local-dir: ./_site/
+        server-dir: /test-deploy/
+        protocol: ftp
+        port: 21
