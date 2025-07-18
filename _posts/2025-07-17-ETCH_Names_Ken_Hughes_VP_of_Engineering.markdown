@@ -42,6 +42,6 @@ received an AS in Mathematics and Applied Science from HVCC and a
 BS in Chemical Engineering from Clarkson University.</p>
 
 <p style="font-weight:700">About ETCH</p>
-<p>ETCH, Inc. is a decarbonization company that produces clean hydrogen and solid carbon from natural gas through its proprietary technology. Founded by Dr. Jonah Erlebacher, a materials science professor at Johns Hopkins University, ETCH is revolutionizing the clean energy industry with its innovative approach to hydrogen production that eliminates CO2 emissions while creating valuable carbon materials. For more information on ETCH, please visit www.etchmaterials.com </p>
+<p>Formulated in the labs of Johns Hopkins University and a recipient of a competitive DOE ARPA-E grant, ETCH, Inc. is a revolutionary decarbonization company that eliminates carbon from natural gas to produce both clean hydrogen and solid carbon. No greenhouse gases are ever produced. The ETCH Process™ will accelerate the clean energy transition through a solution that delivers unrivaled environmental impact, economic value, and versatility. For more information on ETCH, please visit www.etchmaterials.com.</p>
 
 </div>
