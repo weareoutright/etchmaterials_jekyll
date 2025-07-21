@@ -5,6 +5,7 @@ This project is a static HTML website built with Jekyll and hosted on Siteworx. 
 ## Environments
 
 - **Local**: [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+- **Staging**: [https://etchstaging.weareoutright.com/](https://etchstaging.weareoutright.com/)
 - **Live**: [https://etchmaterials.com](https://etchmaterials.com)
 
 ## Local Development
@@ -52,15 +53,25 @@ This project is a static HTML website built with Jekyll and hosted on Siteworx. 
 
 ## Deployment
 
-This site automatically deploys to [https://etchmaterials.com](https://etchmaterials.com) using GitHub Actions when changes are pushed to the `main` branch.
+This site has two deployment targets:
 
-### Deployment Workflow
+- **Production**: [https://etchmaterials.com](https://etchmaterials.com) - Deploys automatically when changes are pushed to the `main` branch
+- **Staging**: [https://etchstaging.weareoutright.com/](https://etchstaging.weareoutright.com/) - Deploys automatically when changes are pushed to the `staging` branch
 
-The deployment process uses GitHub Actions to:
+### Deployment Workflows
+
+#### Production Deployment
+The production deployment process uses GitHub Actions to:
 
 1. **Build the Jekyll site** using Ruby 3.1 and bundler
 2. **Deploy via FTP** to the Siteworx server
 3. **Upload only changed files** for efficient deployments
+
+#### Staging Deployment
+The staging deployment process uses GitHub Actions to:
+
+1. **Build the Jekyll site** using Ruby 3.1 and bundler
+2. **Deploy to GitHub Pages** at the staging URL
 
 ### Contributing Workflow
 
@@ -88,14 +99,23 @@ The deployment process uses GitHub Actions to:
    git push origin feature/your-feature-name
    ```
 
-5. **Create a Pull Request** on GitHub:
+5. **Deploy to staging** (optional but recommended):
+   ```sh
+   git checkout staging
+   git pull origin staging
+   git merge feature/your-feature-name
+   git push origin staging
+   ```
+   Review your changes at [https://etchstaging.weareoutright.com/](https://etchstaging.weareoutright.com/)
+
+6. **Create a Pull Request** on GitHub:
    - Go to the repository on GitHub
    - Click "New pull request"
    - Select your feature branch
    - Add a description of your changes
    - Request review from team members
 
-6. **Deploy**: Once the PR is approved and merged into `main`, the site will automatically deploy
+7. **Deploy to production**: Once the PR is approved and merged into `main`, the site will automatically deploy
 
 #### For Larger Changes (Design, Structure, etc.)
 
@@ -107,11 +127,15 @@ Follow the same workflow as above, but consider:
 
 ### Deployment Configuration
 
-The deployment is configured in `.github/workflows/deploy.yml` and requires these GitHub repository secrets:
+#### Production Deployment
+The production deployment is configured in `.github/workflows/deploy.yml` and requires these GitHub repository secrets:
 
 - `SFTP_SERVER` - The Siteworx server hostname
 - `SFTP_USERNAME` - FTP username
 - `SFTP_PASSWORD` - FTP password
+
+#### Staging Deployment
+The staging deployment is configured in `.github/workflows/pages.yml` and uses GitHub Pages. No additional secrets are required as it uses GitHub's built-in Pages deployment tokens.
 
 ### Monitoring Deployments
 
