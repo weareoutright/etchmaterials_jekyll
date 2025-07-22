@@ -10,12 +10,13 @@ title: News
 
         <ul>
             {% comment %}
-            Create a combined array of posts and external news, then sort by date
+            Sort posts and external news separately, then combine
             {% endcomment %}
-            {% assign all_news = site.posts | concat: site.data.external_news %}
-            {% assign sorted_news = all_news | sort: 'date' | reverse %}
+            {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+            {% assign sorted_external = site.data.external_news | sort: 'date' | reverse %}
+            {% assign all_news = sorted_posts | concat: sorted_external %}
             
-            {% for item in sorted_news %}
+            {% for item in all_news %}
             <li>
                 {% if item.url contains 'http' %}
                     {% comment %}External link{% endcomment %}
