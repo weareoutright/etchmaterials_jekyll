@@ -197,11 +197,12 @@ id: Home
 
 <div id="contact-us" class="updates">
     <div class="content">
-        <h3>Get updates</h3>
+        <h3>Contact Us</h3>
         <form accept-charset="UTF-8" action="https://formkeep.com/f/fee60f61a0ee" method="POST">
-            <input class="short" type="text" name="name" placeholder="Name">
-            <input class="short" type="text" name="company" placeholder="Company">
-            <input type="email" name="email" placeholder="Email Address">
+            <input class="short" type="text" name="name" required="required" placeholder="Name">
+            <input class="short" type="text" name="company" required="required" placeholder="Company">
+            <input type="email" name="email" required="required" placeholder="Email Address">
+            <textarea name="How Can We Help You?" id="How_Can_We_Help_You_" required="required" class="form-control" placeholder="How Can We Help You?"></textarea>
             <input type="hidden" name="utf8" value="✓">
             <button class="submit" type="submit">Submit</button>
         </form>

@@ -485,24 +485,30 @@
         }
 
         form {
-            margin: 0px auto;
+            margin: 0 auto;
             display: block;
             max-width: 1000px;
             flex-wrap: wrap;
 
             @media screen and (min-width: 700px) {
-                isplay: flex;
+                display: flex;
             }
 
-            input {
+            input,
+            textarea {
                 width: 100%;
                 flex: 0 0 100%;
                 border: 1px solid #262626;
                 border-radius: 40px;
                 padding: 10px 20px;
+                font-family: arial, verdana, sans-serif;
                 font-size: 24px;
                 color: #262626;
                 margin: 0 0 30px 0;
+
+                &::placeholder {
+                    color: #606060;
+                }
             }
 
             input.short {
