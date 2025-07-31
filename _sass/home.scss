@@ -505,6 +505,10 @@
                 font-size: 24px;
                 color: #262626;
                 margin: 0 0 30px 0;
+
+                &::placeholder {
+                    color: #606060;
+                }
             }
 
             input.short {
