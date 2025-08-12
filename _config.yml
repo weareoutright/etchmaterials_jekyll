@@ -26,6 +26,7 @@ url: "https://etchmaterials.com" # the base hostname & protocol for your site, e
 permalink: /news/:name/
 
 # Build settings
+future: true # Include future-dated posts in build
 plugins:
   - jekyll-feed
 sass:
