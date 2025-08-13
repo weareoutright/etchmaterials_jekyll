@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ETCH Names Ken Hughes VP of Engineering"
-date: 2025-07-17 10:00:00 -0400
+date: 2025-07-17 10:00:00 -0500
 categories: Press Release
 ---
 
