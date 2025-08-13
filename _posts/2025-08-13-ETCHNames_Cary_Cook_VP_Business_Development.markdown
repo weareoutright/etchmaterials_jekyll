@@ -16,12 +16,11 @@ categories: Press Release
 
 <p>Baltimore, MD – August 13, 2025 – ETCH, Inc. (ETCH), a revolutionary decarbonization
 company producing clean hydrogen and solid carbon from natural gas, announced today
-that it has named Cary Cook VP, Business Development. Cook will report to ETCH CEO
+that it has named Cary Cook VP, Business Development. Cook will report to ETCH CEO,
 Katie Ellet.</p>
 
 <p>
-“Cary brings a mix of business development acumen, experience in the space, and hands-
-on execution, which is exactly what we need as we move from early traction to real scale.
+“Cary brings a mix of business development acumen, experience in the space, and hands-on execution, which is exactly what we need as we move from early traction to real scale.
 Having collaborated with him before, I know he will hit the ground running and make an
 immediate impact,” said Katie Ellet, CEO, ETCH.</p>
 
