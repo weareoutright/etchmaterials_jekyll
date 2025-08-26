@@ -1,0 +1,6 @@
+# Pages to password protect on staging branch
+# Format: filename.html password
+index.html outright!25etch
+who-we-are/index.html outright!25etch
+news/index.html outright!25etch
+privacy-policy/index.html outright!25etch
