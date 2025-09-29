@@ -1,0 +1,75 @@
+.reverse-rfp {
+
+  .content {
+
+    h2 {
+      line-height: 1.3em;
+      max-width: 100%;
+      margin: 0 0 80px 0;
+      font-size: 72px;
+
+      @media screen and (min-width: 700px) {
+        margin: 0 0 50px 0;
+        font-size: 92px;
+      }
+
+      .pill {
+        vertical-align: bottom;
+        margin-bottom: 14px;
+        display: inline-block;
+        border-radius: 60px;
+        display: inline-block;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 18px;
+
+        @media screen and (min-width: 700px) {
+          height: 72px;
+          margin-bottom: 22px;
+        }
+      }
+
+      .blue-pill {
+        background-color: #82CED8;
+        max-width: 240px;
+      }
+
+      .green-pill {
+        background-color: #F17A2C;
+        max-width: 140px;
+      }
+    }
+  }
+}
+
+.feature-content {
+  max-width: 800px;
+  margin: 2rem auto;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.rfp-form {
+
+  textarea {
+    height: 400px;
+  }
+
+  .timeline {
+    clear: both;
+    width: 100%;
+    margin-bottom: 30px;
+
+    select {
+      option {
+        color: black;
+      }
+
+      &:invalid {
+        color: #606060;
+      }
+    }
+  }
+}

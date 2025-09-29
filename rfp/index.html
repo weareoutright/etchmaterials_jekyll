@@ -1,0 +1,195 @@
+---
+layout: default
+title: RFP
+---
+
+<div class="reverse-rfp">
+
+    <div class="content ">
+        <h2 class="breakthrough">Reverse <span class="pill blue-pill">&nbsp;</span><br /><span class="pill green-pill">&nbsp;</span> RFP</h2>
+
+        <div class="feature-content">
+
+            <p><strong>ETCH, INC.</strong> is a revolutionary decarbonization company making clean hydrogen and
+            solid carbon products from natural gas. No greenhouse gases are generated, and no
+            water is used. The ETCH Process™ will accelerate the clean energy transition through
+            a solution that delivers unrivaled economic value, minimal environmental impact, high
+            efficiency, and extreme versatility. The ETCH Process can deliver competitively priced,
+            clean H 2 wherever needed and can be implemented at both small scales for distributed
+            production and large scales for centralized production.</p>
+
+            <p><strong>The ETCH Process</strong> works via a novel natural gas decomposition reaction in which a
+                renewable catalyst decomposes hydrocarbons in natural gas. ETCH’s innovations in
+                processing are pushing natural gas decomposition to the limits of thermodynamic
+                efficiency.</p>
+
+        </div>
+
+
+        <div id="etch-process" class="process-container">
+            <div class="content">
+                <h3>THE ETCH PROCESS&trade;</h3>
+
+                <p class="intro">ETCH’s revolutionary decarbonization technology delivers unrivaled economic value and versatility that will accelerate the clean energy transition. It scales from small, distributed uses to utility-scale with wide geographic applicability and without dependence on access to water, wind or solar.</p>
+                <ul class="etch-process-buttons">
+                    <li data-slide="0" class="active">Process Overview</li>
+                    <li data-slide="1">Hydrogen Production</li>
+                    <li data-slide="2">Decarbonization</li>
+                    <li data-slide="3">Carbon Materials</li>
+
+                </ul>
+
+                <div id="process">
+
+                    <div class="slide01">
+                        <div class="col">
+                            <p class="slide-title">
+                                Process Overview
+                            </p>
+                            <ul class="highlights">
+                                <li>The ETCH Process&trade; is a novel, patented process to convert natural gas (methane) into hydrogen and solid carbon. No CO<sub>2</sub> is ever created</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <img class="illustration" src="/assets/images/ETCH_Process_Overview_2.svg" />
+                        </div>
+                    </div>
+
+                    <div class="slide02">
+                        <div class="col">
+                            <p class="slide-title">
+                                Hydrogen Production
+                            </p>
+                            <ul class="highlights">
+                                <li>Pure H<sub>2</sub> production with zero CO<sub>2</sub> emissions by decarbonizing hydrocarbon fuels</li>
+                                <li>Small footprint, high efficiency, and easily scaled</li>
+                                <li>No water</li>
+                                <li>The ETCH Process&trade; is based on new, proprietary thermochemistry with earth-abundant, domestically sourced minerals</li>
+                                <li>The future will see dramatically increased usage of hydrogen – to be made via the ETCH Process&trade;</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <img class="illustration" src="/assets/images/ETCH_Hydrogen_Production.svg" />
+                        </div>
+                    </div>
+
+                    <div class="slide03">
+                        <div class="col">
+                            <p class="slide-title">
+                                Decarbonization
+                            </p>
+                            <ul class="highlights">
+                                <li>The ETCH Process&trade; can be integrated into existing natural gas power plants, industrial facilities and other uses</li>
+                                <li>Gas is stripped of carbon, leaving pure hydrogen fuel</li>
+                                <li>CO<sub>2</sub> emissions are reduced, potentially to zero</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <img class="illustration" src="/assets/images/ETCH_Decarbonization.svg" />
+                        </div>
+                    </div>
+
+                    <div class="slide04">
+                        <div class="col">
+                            <p class="slide-title">
+                                Carbon Materials
+                            </p>
+                            <ul class="highlights">
+                                <li>Every ton of hydrogen produces at least three tons of pure solid carbon</li>
+                                <li>ETCH Process&trade; carbon is pure and has passed a TCLP test – the standard for environmentally responsible large-scale storage or disposal</li>
+                                <li>As-made carbon may find use in current carbon markets (carbon black, activated carbon, synthetic graphite)</li>
+                                <li>ETCH is actively pursuing methods to transform and integrate carbon into high value products such as fiber</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <img class="illustration" src="/assets/images/ETCH_Carbon_Materials.svg" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="copyright">&copy; {{ site.time | date: '%Y' }} ETCH, Inc.</p>
+
+                <script>
+
+                    $(document).ready(() => {
+                        $('#process').slick({
+                            arrows: 0
+                        });
+
+                        $('ul.etch-process-buttons li').click(function(e) {
+                            $('#process').slick('slickGoTo',$(this).attr("data-slide"));
+                        });
+
+                        /*
+                        $('.arrow-left.active').click(function(e) {
+                            let currentSlide=$('#process').slick('slickCurrentSlide');
+                            $('#process').slick('slickGoTo',(currentSlide-1));
+                        });
+
+                        $('.arrow-right.active').click(function(e) {
+                            let currentSlide=$('#process').slick('slickCurrentSlide');
+                            $('#process').slick('slickGoTo',(currentSlide+1));
+                        });
+                        */
+
+                        $('#process').on('afterChange',function(event,slick,currentSlide,nextSlide) {
+                            $('ul.etch-process-buttons li').each(function() {
+                                if($(this).attr("data-slide")==currentSlide) {
+                                    $(this).addClass("active");
+                                } else {
+                                    $(this).removeClass("active");
+                                }
+
+                            });
+                        });
+
+                    });
+
+                </script>
+            </div>
+        </div>
+
+        <div class="feature-content">
+            <p>ETCH is seeking 1-2 partners to execute a project with our revolutionary low-carbon
+                hydrogen and solid carbon production technology. This limited opportunity can offer
+                early adopters a significant competitive advantage to securing reliable, economic
+                gaseous hydrogen to support ongoing operations and decarbonization of assets. The
+                units proposed for these projects will be <strong>capable of producing up to 5,000 kgs/day</strong>.
+                ETCH has limited the opportunity to ensure strong collaboration and deployment
+                support. With only a few partnership slots open, interested organizations are urged to
+                respond promptly.</p>
+        </div>
+
+
+
+        <div id="contact-us" class="updates rfp-form">
+            <div class="content">
+                <h3>Contact Us</h3>
+                <form accept-charset="UTF-8"  action="https://formkeep.com/f/bffe946bcd53" method="POST">
+                    <input class="short" type="text" name="First Name" required="required" placeholder="* First Name" />
+                    <input class="short" type="text" name="Last Name" required="required" id="Last_Name" placeholder="* Last Name" />
+                    <input type="text" name="company" required="required" placeholder="* Company">
+                    <input class="short" type="email" name="Email" id="Email" required="required" placeholder="* Email Address" />
+                    <input class="short" type="tel" name="Phone" id="Phone" required="required" placeholder="* Phone Number" />
+                    <div class="timeline">
+                        <select name="Reason" id="Reason" required="required" class="form-control">
+                            <option value="" disabled="disabled" selected="selected">Your Timeline</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="Other/Unsure">Other/Unsure</option></select>
+                    </div>
+                    <textarea name="How Can We Help You?" id="How_Can_We_Help_You_" required="required" class="form-control" placeholder="Describe your project"></textarea>
+                    <input type="hidden" name="utf8" value="✓">
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

@@ -466,9 +466,19 @@
     width: 100%;
     background-image: linear-gradient(to bottom, #262626 50%, #EDEDED 50%);
 
+    .reverse-rfp & {
+        background-image: none;
+        background: transparent;
+    }
+
     .content {
         background-color: #FFF;
         padding: 30px 30px;
+
+        .reverse-rfp & {
+            background-image: none;
+            background: transparent;
+        }
 
         @media screen and (min-width: 1280px) {
             padding: 80px 0;
@@ -495,7 +505,8 @@
             }
 
             input,
-            textarea {
+            textarea,
+            select{
                 width: 100%;
                 flex: 0 0 100%;
                 border: 1px solid #262626;
@@ -516,11 +527,11 @@
                 display: inline-block;
             }
 
-            input.short:first-child {
-                margin-right: 0;
+            input.short + .short {
+                margin-left: 0;
 
                 @media screen and (min-width: 760px) {
-                    margin-right: 20px;
+                    margin-left: 20px;
                 }
             }
 
