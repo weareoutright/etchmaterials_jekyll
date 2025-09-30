@@ -3,8 +3,6 @@
 // Update the foundational and global aspects of the page.
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -19,6 +17,12 @@ p, a, li, blockquote {
     font-family: 'Avenir45Book', sans-serif;
     font-size: 16px;
     line-height: 1.45em;
+}
+
+strong,
+[style*="font-weight: 700"],
+[style*="font-weight:700"] {
+    font-family: 'Avenir95Black', sans-serif;
 }
 
 body {
@@ -51,7 +55,7 @@ a {
     .content {
         width: 100% ;
         max-width: 1500px;
-        margin: 0px auto;
+        margin: 0 auto;
         padding: 0 40px;
 
         @media screen and (min-width: 1580px) {
