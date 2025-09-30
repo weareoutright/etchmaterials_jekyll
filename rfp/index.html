@@ -115,45 +115,82 @@ title: RFP
                 document.addEventListener('DOMContentLoaded', () => {
                     const slides = document.querySelectorAll('#process > div');
                     const buttons = document.querySelectorAll('ul.etch-process-buttons li');
+                    const processContainer = document.querySelector('#process');
                     let currentSlide = 0;
+                    let isTransitioning = false;
 
+                    function goToSlide(targetSlide) {
+                        if (targetSlide === currentSlide || isTransitioning) return;
+                        if (targetSlide < 0 || targetSlide >= slides.length) return;
+
+                        isTransitioning = true;
+                        const oldSlideIndex = currentSlide;
+
+                        // Going forward (to higher slide number): new slides in from right, old slides out to left
+                        // Going backward (to lower slide number): new slides in from left, old slides out to right
+                        const goingForward = targetSlide > currentSlide;
+
+                        // Position new slide off-screen
+                        slides[targetSlide].style.transform = goingForward ? 'translateX(100%)' : 'translateX(-100%)';
+                        slides[targetSlide].classList.add('active');
+
+                        // Trigger reflow to ensure the transform is applied before transition
+                        slides[targetSlide].offsetHeight;
+
+                        // Start animations: slide old out and new in
+                        slides[oldSlideIndex].classList.add(goingForward ? 'slide-out-left' : 'slide-out-right');
+                        slides[targetSlide].style.transform = '';
+
+                        // Update buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        buttons[targetSlide].classList.add('active');
+
+                        // Update current slide immediately
+                        currentSlide = targetSlide;
+
+                        // After transition, clean up old slide
+                        setTimeout(() => {
+                            slides[oldSlideIndex].classList.remove('active', 'slide-out-left', 'slide-out-right');
+                            slides[oldSlideIndex].style.transform = '';
+                            isTransitioning = false;
+                        }, 500);
+                    }
+
+                    // Button click handlers
                     buttons.forEach(button => {
                         button.addEventListener('click', () => {
                             const targetSlide = parseInt(button.getAttribute('data-slide'));
-
-                            if (targetSlide === currentSlide) return;
-
-                            const oldSlideIndex = currentSlide;
-
-                            // Going forward (to higher slide number): new slides in from right, old slides out to left
-                            // Going backward (to lower slide number): new slides in from left, old slides out to right
-                            const goingForward = targetSlide > currentSlide;
-
-                            // Position new slide off-screen
-                            slides[targetSlide].style.transform = goingForward ? 'translateX(100%)' : 'translateX(-100%)';
-                            slides[targetSlide].classList.add('active');
-
-                            // Trigger reflow to ensure the transform is applied before transition
-                            slides[targetSlide].offsetHeight;
-
-                            // Start animations: slide old out and new in
-                            slides[oldSlideIndex].classList.add(goingForward ? 'slide-out-left' : 'slide-out-right');
-                            slides[targetSlide].style.transform = '';
-
-                            // Update buttons
-                            buttons.forEach(btn => btn.classList.remove('active'));
-                            button.classList.add('active');
-
-                            // Update current slide immediately
-                            currentSlide = targetSlide;
-
-                            // After transition, clean up old slide
-                            setTimeout(() => {
-                                slides[oldSlideIndex].classList.remove('active', 'slide-out-left', 'slide-out-right');
-                                slides[oldSlideIndex].style.transform = '';
-                            }, 500);
+                            goToSlide(targetSlide);
                         });
                     });
+
+                    // Touch/swipe support
+                    let touchStartX = 0;
+                    let touchEndX = 0;
+
+                    processContainer.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+
+                    processContainer.addEventListener('touchend', (e) => {
+                        touchEndX = e.changedTouches[0].screenX;
+                        handleSwipe();
+                    }, { passive: true });
+
+                    function handleSwipe() {
+                        const swipeThreshold = 50;
+                        const diff = touchStartX - touchEndX;
+
+                        if (Math.abs(diff) > swipeThreshold) {
+                            if (diff > 0) {
+                                // Swiped left - go to next slide
+                                goToSlide(currentSlide + 1);
+                            } else {
+                                // Swiped right - go to previous slide
+                                goToSlide(currentSlide - 1);
+                            }
+                        }
+                    }
                 });
             </script>
         </div>
