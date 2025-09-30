@@ -42,7 +42,7 @@ title: RFP
 
             <div id="process">
 
-                <div class="slide01">
+                <div class="slide01 active">
                     <div class="col">
                         <p class="slide-title">
                             Process Overview
@@ -112,41 +112,49 @@ title: RFP
             <p class="copyright">&copy; {{ site.time | date: '%Y' }} ETCH, Inc.</p>
 
             <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const slides = document.querySelectorAll('#process > div');
+                    const buttons = document.querySelectorAll('ul.etch-process-buttons li');
+                    let currentSlide = 0;
 
-                $(document).ready(() => {
-                    $('#process').slick({
-                        arrows: 0
-                    });
+                    buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const targetSlide = parseInt(button.getAttribute('data-slide'));
 
-                    $('ul.etch-process-buttons li').click(function(e) {
-                        $('#process').slick('slickGoTo',$(this).attr("data-slide"));
-                    });
+                            if (targetSlide === currentSlide) return;
 
-                    /*
-                    $('.arrow-left.active').click(function(e) {
-                        let currentSlide=$('#process').slick('slickCurrentSlide');
-                        $('#process').slick('slickGoTo',(currentSlide-1));
-                    });
+                            const oldSlideIndex = currentSlide;
 
-                    $('.arrow-right.active').click(function(e) {
-                        let currentSlide=$('#process').slick('slickCurrentSlide');
-                        $('#process').slick('slickGoTo',(currentSlide+1));
-                    });
-                    */
+                            // Going forward (to higher slide number): new slides in from right, old slides out to left
+                            // Going backward (to lower slide number): new slides in from left, old slides out to right
+                            const goingForward = targetSlide > currentSlide;
 
-                    $('#process').on('afterChange',function(event,slick,currentSlide,nextSlide) {
-                        $('ul.etch-process-buttons li').each(function() {
-                            if($(this).attr("data-slide")==currentSlide) {
-                                $(this).addClass("active");
-                            } else {
-                                $(this).removeClass("active");
-                            }
+                            // Position new slide off-screen
+                            slides[targetSlide].style.transform = goingForward ? 'translateX(100%)' : 'translateX(-100%)';
+                            slides[targetSlide].classList.add('active');
 
+                            // Trigger reflow to ensure the transform is applied before transition
+                            slides[targetSlide].offsetHeight;
+
+                            // Start animations: slide old out and new in
+                            slides[oldSlideIndex].classList.add(goingForward ? 'slide-out-left' : 'slide-out-right');
+                            slides[targetSlide].style.transform = '';
+
+                            // Update buttons
+                            buttons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+
+                            // Update current slide immediately
+                            currentSlide = targetSlide;
+
+                            // After transition, clean up old slide
+                            setTimeout(() => {
+                                slides[oldSlideIndex].classList.remove('active', 'slide-out-left', 'slide-out-right');
+                                slides[oldSlideIndex].style.transform = '';
+                            }, 500);
                         });
                     });
-
                 });
-
             </script>
         </div>
     </div>
