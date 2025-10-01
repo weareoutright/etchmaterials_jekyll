@@ -53,6 +53,7 @@
 }
 
 .rfp-form {
+  background: #fff;
 
   p {
     margin-top: 0;
@@ -74,6 +75,63 @@
 
       &:invalid {
         color: #606060;
+      }
+    }
+  }
+
+  .form-field {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+
+    &.short {
+      width: 100%;
+
+      @media screen and (min-width: 760px) {
+        width: calc(50% - 10px);
+        display: inline-block;
+      }
+
+      & + .short {
+        @media screen and (min-width: 760px) {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    input,
+    textarea {
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    label {
+      position: absolute;
+      left: 20px;
+      top: 11px;
+      background-color: #FFF;
+      padding: 0 8px;
+      font-family: arial, verdana, sans-serif;
+      font-size: 24px;
+      color: #606060;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+
+    textarea + label {
+      top: 30px;
+    }
+
+    &.active {
+      label {
+        top: 0;
+        font-size: 18px;
+        color: #262626;
+        transform: translateY(-50%);
+      }
+
+      textarea + label {
+        transform: translateY(-50%);
       }
     }
   }

@@ -462,11 +462,6 @@
     width: 100%;
     background-image: linear-gradient(to bottom, #262626 50%, #EDEDED 50%);
 
-    .reverse-rfp & {
-        background-image: none;
-        background: transparent;
-    }
-
     .content {
         background-color: #FFF;
         padding: 30px 30px;
