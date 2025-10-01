@@ -54,6 +54,10 @@
 
 .rfp-form {
 
+  p {
+    margin-top: 0;
+  }
+
   textarea {
     height: 400px;
   }
@@ -61,7 +65,7 @@
   .timeline {
     clear: both;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 
     select {
       option {
