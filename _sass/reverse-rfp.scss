@@ -259,8 +259,15 @@
   }
 
   .accordion-item.active .accordion-icon {
+    font-size: 0;
+
     &:before {
       content: "−";
+      font-size: 28px;
+
+      @media screen and (min-width: 700px) {
+        font-size: 32px;
+      }
     }
   }
 
