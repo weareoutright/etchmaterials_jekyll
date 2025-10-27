@@ -56,10 +56,10 @@
   }
 
   .submit-project-btn {
-    background-color: #FFFFFF;
+    background-color: #00A0AC;
     padding: 20px 60px;
     border-radius: 50px;
-    color: #262626;
+    color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
     border: 3px solid #00A0AC;
@@ -73,8 +73,8 @@
     display: block;
 
     &:hover {
-      background-color: #00A0AC;
-      color: #FFFFFF;
+      background-color: #FFFFFF;
+      color: #262626;
     }
   }
 
@@ -214,7 +214,7 @@
     font-weight: 300;
     line-height: 1;
     margin-right: 20px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     order: -1;
 
     @media screen and (min-width: 700px) {
@@ -224,7 +224,9 @@
   }
 
   .accordion-item.active .accordion-icon {
-    transform: rotate(45deg);
+    &:before {
+      content: "−";
+    }
   }
 
   .accordion-content {
@@ -246,10 +248,73 @@
         line-height: 1.7;
       }
     }
+
+    .responsibilities-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding-bottom: 30px;
+
+      @media screen and (min-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+      }
+    }
+
+    .responsibility-column {
+      h4 {
+        font-family: "made_outer_sans_medium", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0 0 20px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        @media screen and (min-width: 700px) {
+          font-size: 18px;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-size: 16px;
+          line-height: 1.7;
+          color: #FFFFFF;
+          font-family: Avenir45Book, Arial, sans-serif;
+          margin-bottom: 20px;
+          padding-left: 0;
+          position: relative;
+
+          @media screen and (min-width: 700px) {
+            font-size: 16px;
+            line-height: 1.7;
+          }
+
+          &:before {
+            content: "•";
+            color: #FFFFFF;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+          }
+
+          strong {
+            font-family: Avenir95Black, Arial, sans-serif;
+            color: #00A0AC;
+          }
+        }
+      }
+    }
   }
 
   .accordion-item.active .accordion-content {
-    max-height: 1000px;
+    max-height: 2000px;
     padding-top: 10px;
   }
 
