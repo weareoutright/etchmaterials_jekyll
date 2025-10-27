@@ -50,6 +50,234 @@
   p {
     font-size: 20px;
   }
+
+  .submit-jumplink {
+    text-decoration: none;
+  }
+
+  .submit-project-btn {
+    background-color: #FFFFFF;
+    padding: 20px 60px;
+    border-radius: 50px;
+    color: #262626;
+    text-align: center;
+    text-transform: uppercase;
+    border: 3px solid #00A0AC;
+    font-size: 20px;
+    margin: 40px 0;
+    cursor: pointer;
+    font-family: "made_outer_sans_medium", Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: block;
+
+    &:hover {
+      background-color: #00A0AC;
+      color: #FFFFFF;
+    }
+  }
+
+}
+
+.scope-collaboration {
+  background-color: #1A1A1A;
+  background-image: url('/assets/images/molecule_bg_dark.png');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  margin: 0;
+
+  @media screen and (min-width: 700px) {
+    padding: 100px 0;
+  }
+
+  h3 {
+    font-size: 48px;
+    font-family: "made_outer_sans_medium", Arial, sans-serif;
+    margin-bottom: 20px;
+    text-transform: none;
+    color: #FFFFFF;
+    font-weight: 400;
+
+    @media screen and (min-width: 700px) {
+      font-size: 53px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .scope-subtitle {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-family: Avenir45Book, Arial, sans-serif;
+
+    @media screen and (min-width: 700px) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+  }
+
+  .benefit-item {
+    text-align: left;
+
+    .benefit-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 700px) {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 30px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #FFFFFF;
+      margin: 0;
+      font-family: Avenir45Book, Arial, sans-serif;
+
+      @media screen and (min-width: 700px) {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .accordion-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 60px 0 40px 0;
+    overflow: hidden;
+  }
+
+  .accordion-header {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 30px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "made_outer_sans_medium", Arial, sans-serif;
+    text-align: left;
+    transition: opacity 0.3s ease;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media screen and (min-width: 700px) {
+      font-size: 18px;
+      padding: 35px 0;
+    }
+  }
+
+  .accordion-title {
+    flex: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .accordion-icon {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    order: -1;
+
+    @media screen and (min-width: 700px) {
+      font-size: 32px;
+      margin-right: 25px;
+    }
+  }
+
+  .accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #FFFFFF;
+      margin: 0;
+      font-family: Avenir45Book, Arial, sans-serif;
+      padding-bottom: 30px;
+
+      @media screen and (min-width: 700px) {
+        font-size: 18px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 1000px;
+    padding-top: 10px;
+  }
+
+  .etch-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #FFFFFF;
+    margin-top: 40px;
+    font-family: Avenir45Book, Arial, sans-serif;
+
+    @media screen and (min-width: 700px) {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    strong {
+      font-family: Avenir95Black, Arial, sans-serif;
+    }
+
+    a {
+      color: #82CED8;
+      text-decoration: underline;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
 }
 
 .rfp-form {
