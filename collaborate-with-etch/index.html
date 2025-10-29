@@ -99,16 +99,31 @@ title: Partner with Etch
                 accordionHeaders.forEach(header => {
                     header.addEventListener('click', () => {
                         const accordionItem = header.parentElement;
+                        const accordionIcon = header.querySelector('.accordion-icon');
+                        const accordionContent = accordionItem.querySelector('.accordion-content');
                         const isActive = accordionItem.classList.contains('active');
 
-                        // Close all accordion items
+                        // Close all accordion items and reset icons
                         document.querySelectorAll('.scope-collaboration .accordion-item').forEach(item => {
+                            const content = item.querySelector('.accordion-content');
+                            const icon = item.querySelector('.accordion-icon');
+
+                            if (content) {
+                                content.style.maxHeight = null;
+                            }
                             item.classList.remove('active');
+                            if (icon) icon.textContent = '+';
                         });
 
                         // Toggle the clicked item
                         if (!isActive) {
                             accordionItem.classList.add('active');
+                            if (accordionIcon) accordionIcon.textContent = '−';
+
+                            // Set max-height to the actual scroll height for smooth animation
+                            if (accordionContent) {
+                                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                            }
                         }
                     });
                 });

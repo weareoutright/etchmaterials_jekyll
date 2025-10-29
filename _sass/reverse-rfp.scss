@@ -249,25 +249,13 @@
     font-weight: 300;
     line-height: 1;
     margin-right: 20px;
-    transition: all 0.3s ease;
     order: -1;
+    min-width: 28px;
 
     @media screen and (min-width: 700px) {
       font-size: 32px;
       margin-right: 25px;
-    }
-  }
-
-  .accordion-item.active .accordion-icon {
-    font-size: 0;
-
-    &:before {
-      content: "−";
-      font-size: 28px;
-
-      @media screen and (min-width: 700px) {
-        font-size: 32px;
-      }
+      min-width: 32px;
     }
   }
 
@@ -329,7 +317,7 @@
           color: #FFFFFF;
           font-family: Avenir45Book, Arial, sans-serif;
           margin-bottom: 20px;
-          padding-left: 0;
+          padding-left: 1.5em;
           position: relative;
 
           @media screen and (min-width: 700px) {
@@ -338,6 +326,8 @@
           }
 
           &:before {
+            position: absolute;
+            left: 0;
             content: "•";
             color: #FFFFFF;
             font-weight: bold;
@@ -356,7 +346,6 @@
   }
 
   .accordion-item.active .accordion-content {
-    max-height: 2000px;
     padding-top: 10px;
   }
 
