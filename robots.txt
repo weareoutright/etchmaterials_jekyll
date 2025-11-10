@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /collaborate-with-etch/
+
+Sitemap: https://etchmaterials.com/sitemap.xml
