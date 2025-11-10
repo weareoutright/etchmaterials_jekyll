@@ -35,6 +35,20 @@ jobs:
         env:
           JEKYLL_ENV: production
       
+      - name: Encrypt protected pages
+        run: |
+          npm install -g pagecrypt
+          while read line; do
+            if [[ ! -z "$line" && ! $line =~ ^# ]]; then
+              file=$(echo $line | cut -d' ' -f1)
+              pass=$(echo $line | cut -d' ' -f2-)
+              if [[ -f "_site/$file" ]]; then
+                echo "Encrypting _site/$file"
+                pagecrypt "_site/$file" "_site/$file" "$pass"
+              fi
+            fi
+          done < _protected_pages.txt
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -55,7 +55,7 @@ id: Home
 
         <div id="process">
 
-            <div class="slide01">
+            <div class="slide01 active">
                 <div class="col">
                     <p class="slide-title">
                         Process Overview
@@ -65,7 +65,7 @@ id: Home
                     </ul>
                 </div>
                 <div class="col">
-                    <img class="illustration" src="/assets/images/ETCH_Process_Overview_2.svg" />
+                    <img class="illustration" src="/assets/images/ETCH_Process_Overview_2.svg" alt="" />
                 </div>
             </div>
 
@@ -83,7 +83,7 @@ id: Home
                     </ul>
                 </div>
                 <div class="col">
-                    <img class="illustration" src="/assets/images/ETCH_Hydrogen_Production.svg" />
+                    <img class="illustration" src="/assets/images/ETCH_Hydrogen_Production.svg" alt=""/>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ id: Home
                     </ul>
                 </div>
                 <div class="col">
-                    <img class="illustration" src="/assets/images/ETCH_Decarbonization.svg" />
+                    <img class="illustration" src="/assets/images/ETCH_Decarbonization.svg" alt=""/>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@ id: Home
                     </ul>
                 </div>
                 <div class="col">
-                    <img class="illustration" src="/assets/images/ETCH_Carbon_Materials.svg" />
+                    <img class="illustration" src="/assets/images/ETCH_Carbon_Materials.svg" alt="" />
                 </div>
             </div>
 
@@ -125,41 +125,86 @@ id: Home
         <p class="copyright">&copy; {{ site.time | date: '%Y' }} ETCH, Inc.</p>
 
         <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const slides = document.querySelectorAll('#process > div');
+                const buttons = document.querySelectorAll('ul.etch-process-buttons li');
+                const processContainer = document.querySelector('#process');
+                let currentSlide = 0;
+                let isTransitioning = false;
 
-            $(document).ready(() => {
-                $('#process').slick({
-                    arrows: 0
-                });
+                function goToSlide(targetSlide) {
+                    if (targetSlide === currentSlide || isTransitioning) return;
+                    if (targetSlide < 0 || targetSlide >= slides.length) return;
 
-                $('ul.etch-process-buttons li').click(function(e) {
-                    $('#process').slick('slickGoTo',$(this).attr("data-slide"));
-                });
+                    isTransitioning = true;
+                    const oldSlideIndex = currentSlide;
 
-                /*
-                $('.arrow-left.active').click(function(e) {
-                    let currentSlide=$('#process').slick('slickCurrentSlide');
-                    $('#process').slick('slickGoTo',(currentSlide-1));
-                });
+                    // Going forward (to higher slide number): new slides in from right, old slides out to left
+                    // Going backward (to lower slide number): new slides in from left, old slides out to right
+                    const goingForward = targetSlide > currentSlide;
 
-                $('.arrow-right.active').click(function(e) {
-                    let currentSlide=$('#process').slick('slickCurrentSlide');
-                    $('#process').slick('slickGoTo',(currentSlide+1));
-                });
-                */
+                    // Position new slide off-screen
+                    slides[targetSlide].style.transform = goingForward ? 'translateX(100%)' : 'translateX(-100%)';
+                    slides[targetSlide].classList.add('active');
 
-                $('#process').on('afterChange',function(event,slick,currentSlide,nextSlide) {
-                    $('ul.etch-process-buttons li').each(function() {
-                        if($(this).attr("data-slide")==currentSlide) {
-                            $(this).addClass("active");
-                        } else {
-                            $(this).removeClass("active");
-                        }
+                    // Trigger reflow to ensure the transform is applied before transition
+                    slides[targetSlide].offsetHeight;
 
+                    // Start animations: slide old out and new in
+                    slides[oldSlideIndex].classList.add(goingForward ? 'slide-out-left' : 'slide-out-right');
+                    slides[targetSlide].style.transform = '';
+
+                    // Update buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    buttons[targetSlide].classList.add('active');
+
+                    // Update current slide immediately
+                    currentSlide = targetSlide;
+
+                    // After transition, clean up old slide
+                    setTimeout(() => {
+                        slides[oldSlideIndex].classList.remove('active', 'slide-out-left', 'slide-out-right');
+                        slides[oldSlideIndex].style.transform = '';
+                        isTransitioning = false;
+                    }, 500);
+                }
+
+                // Button click handlers
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const targetSlide = parseInt(button.getAttribute('data-slide'));
+                        goToSlide(targetSlide);
                     });
                 });
 
-            });
+                // Touch/swipe support
+                let touchStartX = 0;
+                let touchEndX = 0;
 
+                processContainer.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                processContainer.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    const diff = touchStartX - touchEndX;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            // Swiped left - go to next slide
+                            goToSlide(currentSlide + 1);
+                        } else {
+                            // Swiped right - go to previous slide
+                            goToSlide(currentSlide - 1);
+                        }
+                    }
+                }
+            });
         </script>
     </div>
 </div>
