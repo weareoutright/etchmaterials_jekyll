@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ETCH Names Pankahj Chadha Chief Operating Officer"
+title: "ETCH Names Pankaj Chadha Chief Operating Officer"
 date: 2026-01-15 10:00:00 -0500
 categories: Press Release
 ---
