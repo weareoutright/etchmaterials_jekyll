@@ -49,12 +49,17 @@ completed Advanced Management Programs at Leeds University, UK and Indian Instit
 Management Ahmedabad, as well as additional specialized training in finance and strategic leadership.</p>
 
 <p style="font-weight:700">About ETCH</p>
-<p>Formulated in the labs of Johns Hopkins University and a recipient of a competitive DOE
-ARPA-E grant, ETCH, Inc. is a revolutionary decarbonization company that eliminates
-carbon from natural gas to produce both clean hydrogen and solid carbon. No greenhouse
-gases are ever produced. The ETCH Process™ will accelerate the clean energy transition
-through a solution that delivers unrivaled environmental impact, economic value, and
-versatility. For more information on ETCH, please visit www.etchmaterials.com.
+<p>
+ETCH, Inc. is a revolutionary industrial technology company disrupting the natural gas paradigm by
+transforming methane into high-value solid carbon and clean hydrogen without the use of water or the
+generation of process emissions. The ETCH Process™ is engineered for maximum economic impact,
+delivering unrivaled value to heavy industries through a system that scales from distributed, 
+small-scale operations to utility-level production. Initially formulated in the labs of Johns Hopkins
+University, ETCH empowers sectors ranging from manufacturing to transportation to chemicals to
+enhance their operational efficiency and secure competitive advantage in a rapidly evolving global
+market. For more information on ETCH, please visit www.etchmaterials.com.
 </p>
 
 </div>
+
+
