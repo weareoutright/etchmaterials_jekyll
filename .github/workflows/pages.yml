@@ -44,7 +44,7 @@ jobs:
               pass=$(echo $line | cut -d' ' -f2-)
               if [[ -f "_site/$file" ]]; then
                 echo "Encrypting _site/$file"
-                pagecrypt "_site/$file" "_site/$file" "$pass"
+                pagecrypt "_site/$file" "_site/$file" "$pass" --remember 30
               fi
             fi
           done < _protected_pages.txt
