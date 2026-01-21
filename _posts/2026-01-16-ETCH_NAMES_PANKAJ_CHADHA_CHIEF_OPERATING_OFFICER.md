@@ -50,14 +50,15 @@ Management Ahmedabad, as well as additional specialized training in finance and 
 
 <p style="font-weight:700">About ETCH</p>
 <p>
-ETCH, Inc. is a revolutionary industrial technology company disrupting the natural gas paradigm by
-transforming methane into high-value solid carbon and clean hydrogen without the use of water or the
-generation of process emissions. The ETCH Process™ is engineered for maximum economic impact,
-delivering unrivaled value to heavy industries through a system that scales from distributed, 
-small-scale operations to utility-level production. Initially formulated in the labs of Johns Hopkins
-University, ETCH empowers sectors ranging from manufacturing to transportation to chemicals to
-enhance their operational efficiency and secure competitive advantage in a rapidly evolving global
-market. For more information on ETCH, please visit www.etchmaterials.com.
+ETCH, Inc. is a revolutionary materials and energy technology company disrupting the natural 
+gas paradigm by transforming methane into high-value solid carbon and clean hydrogen without 
+the use of water or the generation of process emissions. The ETCH Process™ is engineered 
+for maximum economic impact, delivering unrivaled value to heavy industries through a system 
+that scales from distributed, small-scale operations to utility-level production. ETCH produces 
+critical materials essential to energy, defense, and national security, helping strengthen 
+supply chains for advanced technologies. ETCH also empowers sectors ranging from transportation 
+to chemicals to enhance their operational efficiency and secure competitive advantage. 
+For more information on ETCH, please visit www.etchmaterials.com.
 </p>
 
 </div>
