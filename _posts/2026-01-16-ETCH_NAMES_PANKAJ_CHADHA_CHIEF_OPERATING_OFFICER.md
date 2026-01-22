@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ETCH Names Pankaj Chadha Chief Operating Officer"
-date: 2026-01-15 10:00:00 -0500
+date: 2026-01-22 10:00:00 -0500
 categories: Press Release
 ---
 
@@ -13,7 +13,7 @@ categories: Press Release
 
 <div class="post-bottom-pressrelease content">
 
-<p>Baltimore, MD – January 20, 2026 – ETCH, Inc. (ETCH), a groundbreaking technology company
+<p>Baltimore, MD – January 22, 2026 – ETCH, Inc. (ETCH), a groundbreaking technology company
 that transforms natural gas into clean hydrogen and solid carbon, announced today that it has named
 Pankaj Chadha Chief Operating Officer. Mr. Chadha will report to Katie Ellet, CEO, ETCH.</p>
 
